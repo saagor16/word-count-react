@@ -15,6 +15,18 @@ const WordCount = () => {
     return text.length;
   };
 
+  const getSentenceCount = (text) => {
+    // Split sentences by periods, exclamation marks, and question marks
+    const sentences = text.trim() === '' ? [] : text.split(/[.!?]+/);
+    // Filter out empty strings from split result
+    const filteredSentences = sentences.filter(sentence => sentence.trim() !== '');
+    return filteredSentences.length;
+  };
+
+  const getCharactersWithoutSpaces = (text) => {
+    return text.replace(/\s/g, '').length;
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 p-4">
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
@@ -31,6 +43,12 @@ const WordCount = () => {
           </div>
           <div className="bg-green-500 text-white rounded-lg px-4 py-2 shadow-md transform transition duration-300 hover:scale-105">
             <p className="text-xl">Character Count: <span className="font-semibold">{getCharacterCount(text)}</span></p>
+          </div>
+          <div className="bg-yellow-500 text-white rounded-lg px-4 py-2 shadow-md transform transition duration-300 hover:scale-105">
+            <p className="text-xl">Sentence Count: <span className="font-semibold">{getSentenceCount(text)}</span></p>
+          </div>
+          <div className="bg-purple-500 text-white rounded-lg px-4 py-2 shadow-md transform transition duration-300 hover:scale-105">
+            <p className="text-xl">Characters without Spaces: <span className="font-semibold">{getCharactersWithoutSpaces(text)}</span></p>
           </div>
         </div>
       </div>
