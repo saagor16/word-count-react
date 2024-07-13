@@ -2,6 +2,8 @@
 
 This is a simple React application that counts the number of words and characters in a given text input. The application uses React for the front-end and Tailwind CSS for styling.
 
+
+
 ## Features
 
 - **Real-time counting:** The word and character counts update as you type.
@@ -14,7 +16,7 @@ Follow these steps to set up and run the project locally.
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/word-char-counter.git
+    git clone https://github.com/saagor16/word-count-react
     cd word-char-counter
     ```
 
@@ -58,5 +60,17 @@ word-char-counter/
 ├── tailwind.config.js
 ├── vite.config.js
 └── README.md.
+
+## Live Demo
+
+Check out the live demo of the application [here](https://word-count-react-lilac.vercel.app/).
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or suggestions.
+
+## License
+
+This project is licensed under the MIT License.
 
 
